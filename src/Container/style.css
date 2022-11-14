@@ -1,0 +1,7 @@
+.container {
+    overflow-x: auto;
+    margin: 10px;
+    flex-basis: 700px;
+    border-radius: 30px;
+    box-shadow: 0 0 10px black;
+}
