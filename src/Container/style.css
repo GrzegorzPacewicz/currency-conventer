@@ -5,6 +5,8 @@
     border-radius: 30px;
     box-shadow: 0 0 10px black;
     min-width: 500px;
+    background-color: aliceblue;
+    padding-bottom: 20px;
 }
 
 /* @media (max-width: 767px) {

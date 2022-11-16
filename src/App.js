@@ -1,6 +1,7 @@
 import Form from "./Form";
 import Container from "./Container"
 import Header from "./Header";
+import Result from "./Result";
 
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
                 <Form>
 
                 </Form>
+                <Result />
             </Container>
         </main>
 
