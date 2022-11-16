@@ -8,9 +8,9 @@ function App() {
 
         <main>
             <Container>
- <Header title="Prosty kalkulator walut" />
+                <Header title="Prosty kalkulator walut" />
                 <Form>
-               
+
                 </Form>
             </Container>
         </main>
