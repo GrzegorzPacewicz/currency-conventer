@@ -6,3 +6,11 @@
     box-shadow: 0 0 10px black;
     min-width: 500px;
 }
+
+/* @media (max-width: 767px) {
+    .container{
+        width: 100%;
+        margin: 0px;
+        padding: 0px;
+    }
+} */

@@ -8,10 +8,10 @@ html {
   box-sizing: inherit;
 }
 body {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Roboto', sans-serif;
   color: #222227;
-  margin: auto;
-  padding: 20px;
+  margin: 0 auto;
+  padding: 0 20px;
   text-align: center;
   background-image: url(../src/images/money.jpg);
   display: flex;
