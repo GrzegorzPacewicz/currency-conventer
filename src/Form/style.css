@@ -1,6 +1,5 @@
 .form {
-    padding: 30px;
-    border: 1px solid #1d8294;
+    padding: 0px 10px 20px 10px;
     text-align: center;
     margin: 0 auto;
     background: aliceblue;
@@ -11,11 +10,11 @@
     text-align: left;
 }
 
-.form__header {
+/* .form__header {
     font-size: 40px;
     color: #124149;
     text-rendering: optimizeLegibility;
-}
+} */
 
 .form__fieldset {
     max-width: 450px;
@@ -37,8 +36,7 @@
     padding: 10px;
     margin-left: 5px;
     text-align: center;
-    
-}
+    }
 
 .form__select {
     padding: 10px;

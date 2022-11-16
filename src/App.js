@@ -1,5 +1,6 @@
 import Form from "./Form";
 import Container from "./Container"
+import Header from "./Header";
 
 
 function App() {
@@ -7,7 +8,10 @@ function App() {
 
         <main>
             <Container>
-                <Form />
+ <Header title="Prosty kalkulator walut" />
+                <Form>
+               
+                </Form>
             </Container>
         </main>
 
