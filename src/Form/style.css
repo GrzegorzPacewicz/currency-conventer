@@ -1,5 +1,5 @@
 .form {
-    padding: 0px 10px 20px 10px;
+    padding:   20px;
     text-align: center;
     margin: 0 auto;
     background: aliceblue;
@@ -9,12 +9,6 @@
     padding: 5px;
     text-align: left;
 }
-
-/* .form__header {
-    font-size: 40px;
-    color: #124149;
-    text-rendering: optimizeLegibility;
-} */
 
 .form__fieldset {
     max-width: 450px;
