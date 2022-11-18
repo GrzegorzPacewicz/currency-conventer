@@ -1,5 +1,5 @@
 .form {
-    padding:   20px 20px 0 20px;
+    padding: 20px 20px 0 20px;
     text-align: center;
     margin: 0 auto;
     background: aliceblue;
@@ -30,7 +30,7 @@
     padding: 10px;
     margin-left: 5px;
     text-align: center;
-    }
+}
 
 .form__select {
     padding: 10px;
@@ -66,6 +66,5 @@
 }
 
 .form__button--reset {
-    width: 100%;
-    max-width: 450px;
+    margin: 5px;
 }

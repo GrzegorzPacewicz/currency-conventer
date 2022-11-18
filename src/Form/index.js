@@ -1,27 +1,75 @@
+import { useState } from "react";
 import "./style.css"
+import { currencies } from "../Currencies/currency"
 
 
-const Form = () => (
-    <form className="form">
-        <fieldset className="form__fieldset">
-            <legend className="form__legend">Kwota do przeliczenia:</legend>
-            <label className="form__label">
-                <span>PLN</span>
-                <input className="form__inputAmount" type="number" min="0.01" required
-                    placeholder="Wpisz kwotę" value="" step="0.01" />
-            </label>
-        </fieldset>
-        <fieldset className="form__fieldset">
-            <legend className="form__legend">Przelicz na*:</legend>
-            <select className="form__select" name="currency">
-                <option className="form__option" value="EUR" selected>EUR</option>
-                <option className="form__option" value="GBP">GBP</option>
-                <option className="form__option" value="USD">USD</option>
-            </select>
-            <p className="form__caution">*Kurs NBP z dnia 14.09.2022</p>
-        </fieldset>
-        
-    </form>
-);
+const Form = ({ calculateResult, setResult }) => {
+    const [amountExchange, setAmountExchange] = useState("");
+    const [currency, setCurrency] = useState(currencies[0].short);
+
+    const onFormSubmit = (event) => {
+        event.preventDefault();
+        calculateResult(amountExchange, currency);
+    };
+
+    const onFormReset = () => {
+        setAmountExchange("");
+        setCurrency("EUR")
+        setResult("");
+    };
+
+
+    return (
+        <form className="form"
+            onSubmit={onFormSubmit}
+            onReset={onFormReset}
+        >
+            <fieldset className="form__fieldset">
+                <legend className="form__legend">Kwota do przeliczenia:</legend>
+                <label className="form__label">
+                    <span>PLN</span>
+                    <input
+                        className="form__inputAmount"
+                        type="number"
+                        required min="0.01"
+                        step="0.01"
+                        placeholder="Wpisz kwotę"
+                        value={amountExchange}
+                        onChange={({ target }) => setAmountExchange(target.value)}
+                    />
+                </label>
+            </fieldset>
+            <fieldset className="form__fieldset">
+                <legend className="form__legend">Przelicz na*:</legend>
+                <select
+                    className="form__select"
+                    name="currencyConverted"
+                    value={currency}
+                    onChange={({ target }) => setCurrency(target.value)}
+                >
+                    {currencies.map(currency => (
+                        <option
+                            key={currency.short}
+                            value={currency.short}
+                        >
+                            {currency.name}
+                        </option>
+
+                    ))}
+                </select>
+                <p className="form__caution">*Kurs NBP z dnia 14.09.2022</p>
+            </fieldset>
+ 
+            <p>
+                <button className="form__button">Przelicz</button>
+                <input
+                    className="form__button form__button--reset"
+                    type="reset"
+                    value="Wyczyść"
+                />
+            </p>
+        </form>
+    )
+};
 
 export default Form;
