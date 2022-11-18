@@ -2,18 +2,18 @@ import "./style.css"
 
 
 const Form = () => (
-    <form className="form js-form">
+    <form className="form">
         <fieldset className="form__fieldset">
             <legend className="form__legend">Kwota do przeliczenia:</legend>
             <label className="form__label">
                 <span>PLN</span>
-                <input className="form__inputAmount js-form__inputAmount" type="number" min="0.01" required
+                <input className="form__inputAmount" type="number" min="0.01" required
                     placeholder="Wpisz kwotę" value="" step="0.01" />
             </label>
         </fieldset>
         <fieldset className="form__fieldset">
             <legend className="form__legend">Przelicz na*:</legend>
-            <select className="form__select js-form__select" name="currency">
+            <select className="form__select" name="currency">
                 <option className="form__option" value="EUR" selected>EUR</option>
                 <option className="form__option" value="GBP">GBP</option>
                 <option className="form__option" value="USD">USD</option>

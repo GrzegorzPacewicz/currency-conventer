@@ -1,9 +1,4 @@
-.form__caution {
-    padding: 5px;
-    text-align: left;
-}
-
-.form__fieldset {
+.result__fieldset {
     max-width: 450px;
     text-align: center;
     margin: 25px auto;
@@ -11,7 +6,7 @@
     border-color: #1d8294;
 }
 
-.form__legend {
+.result__legend {
     text-align: left;
     border: 1px solid #333;
     padding: 5px;
@@ -19,46 +14,27 @@
     border-color: #1d8294;
 }
 
-.form__inputAmount {
-    padding: 10px;
-    margin-left: 5px;
-    text-align: center;
-    }
-
-.form__select {
-    padding: 10px;
-}
-
-.form__option {
-    color: #fff;
-    background: #1d8294;
-}
-
-.form__option:hover {
-    background: #1d8294;
-}
-
-.form__button {
+.result__button {
     padding: 12px;
     color: #fff;
     background: #1d8294;
     border: 1px;
 }
 
-.form__button:hover {
+.result__button:hover {
     background: hsl(189, 67%, 40%);
 }
 
-.form__button:active {
+.result__button:active {
     background: #1c1c49;
 }
 
-.form__result {
+.result__form {
     padding: 10px;
     margin-left: 5px;
 }
 
-.form__button--reset {
+.result__button--reset {
     width: 100%;
     max-width: 450px;
 }
