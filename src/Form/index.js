@@ -1,6 +1,5 @@
 import { useState } from "react";
 import "./style.css";
-import Result from "../Result";
 import { currencies } from "../Currencies/currency"
 
 
@@ -22,9 +21,9 @@ const Form = () => {
     };
     const calculateResult = (amountExchange, currency) => {
         const rateExchange = currencies.find(({ short }) => short === currency).rate;
-        const currencyFinal = currencies.find(({ short }) => short === currency).short;
+        const currencyExchanged = currencies.find(({ short }) => short === currency).short;
 
-        setResult((+amountExchange / rateExchange).toFixed(2) + currencyFinal);
+        setResult((+amountExchange / rateExchange).toFixed(2) + currencyExchanged);
     };
 
 
@@ -72,12 +71,12 @@ const Form = () => {
             <p>
                 <fieldset className="form__fieldset">
                     <legend className="form__legend">Wynik:</legend>
-
-                    <button className="form__button">Przelicz</button>
                     <p className="form__result">
                         Za tę kwotę otrzymasz: <strong> {result} </strong>
                     </p>
-                    <button className="form__button form__button--reset" type="reset">Wyczyść</button>
+                    <button className="form__button">Przelicz</button>
+
+                    <button className="form__button" type="reset">Wyczyść</button>
 
                 </fieldset>
 

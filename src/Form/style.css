@@ -36,7 +36,7 @@
     padding: 10px;
     margin-left: 5px;
     text-align: center;
-    
+
 }
 
 .form__select {
@@ -57,6 +57,10 @@
     color: #fff;
     background: hsl(189, 67%, 35%);
     border: 1px;
+    width: 100px;
+    margin: 10px;
+    
+
 }
 
 .form__button:hover {
@@ -64,7 +68,7 @@
 }
 
 .form__button:active {
-    background:  hsl(189, 67%, 50%);
+    background: hsl(189, 67%, 50%);
 }
 
 .form__result {
