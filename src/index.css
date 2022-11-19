@@ -18,3 +18,11 @@ body {
   align-items: center;
   justify-content: center;
 }
+
+@media (max-width: 767px) {
+  body{
+    background-image: none;
+    margin: 0 10px;
+    padding: 10px;
+}
+}

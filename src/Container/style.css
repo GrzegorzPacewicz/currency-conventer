@@ -1,18 +1,24 @@
 .container {
     overflow-x: auto;
     margin: 10px;
+    width: 500px;
     flex-basis: 700px;
     border-radius: 30px;
     box-shadow: 0 0 10px black;
-    min-width: 450px;
     background-color: aliceblue;
     padding-bottom: 20px;
 }
 
 @media (max-width: 767px) {
-    .container{
-        width: 400px;
-        margin: 0px;
-        padding: 0px;
+    .container {
+        width: 350px;
+        border-radius: 0px;
+        box-shadow: none;
+        flex-basis: 700px;
+        min-width: 300px;
+        background-color: aliceblue;
+        padding-bottom: 20px;
+        margin: 0 10px;
+        padding: 0 10px;
     }
 }

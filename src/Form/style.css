@@ -1,8 +1,15 @@
 .form {
-    padding: 30px;
+    padding: 0 20px;
     text-align: center;
     margin: 0 auto;
     background: aliceblue;
+}
+
+@media (max-width: 767px) {
+    .form {
+        padding: 0px;
+        margin: 0px;
+    }
 }
 
 .form__caution {
@@ -17,7 +24,6 @@
 }
 
 .form__fieldset {
-    max-width: 450px;
     text-align: center;
     margin: 25px auto;
     padding: 15px;
@@ -28,7 +34,6 @@
     text-align: left;
     border: 1px solid #333;
     padding: 5px;
-    color: #323283;
     border-color: #1d8294;
 }
 
@@ -57,11 +62,7 @@
     color: #fff;
     background: hsl(189, 67%, 35%);
     border: 1px;
-    width: 100px;
-    margin: 10px;
-    
-
-}
+    width: 100px;}
 
 .form__button:hover {
     background: hsl(189, 67%, 42%);
@@ -78,5 +79,4 @@
 
 .form__button--reset {
     width: 100%;
-    max-width: 450px;
 }

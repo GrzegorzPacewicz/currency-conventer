@@ -4,3 +4,10 @@
     background: aliceblue;
     padding-top: 30px;
  }
+
+ @media (max-width: 767px) {
+    .header {
+        padding-top: 5px;
+        margin: 0px;
+    }
+}

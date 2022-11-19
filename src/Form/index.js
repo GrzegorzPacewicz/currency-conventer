@@ -23,7 +23,7 @@ const Form = () => {
         const rateExchange = currencies.find(({ short }) => short === currency).rate;
         const currencyExchanged = currencies.find(({ short }) => short === currency).short;
 
-        setResult((+amountExchange / rateExchange).toFixed(2) + currencyExchanged);
+        setResult(`${(+amountExchange / rateExchange).toFixed(2)} ${currencyExchanged}`);
     };
 
 
