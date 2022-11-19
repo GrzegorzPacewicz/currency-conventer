@@ -1,11 +1,14 @@
 import { useState } from "react";
-import "./style.css"
+import "./style.css";
+import Result from "../Result";
 import { currencies } from "../Currencies/currency"
 
 
-const Form = ({ calculateResult, setResult }) => {
+
+const Form = () => {
     const [amountExchange, setAmountExchange] = useState("");
     const [currency, setCurrency] = useState(currencies[0].short);
+    const [result, setResult] = useState(null);
 
     const onFormSubmit = (event) => {
         event.preventDefault();
@@ -16,6 +19,12 @@ const Form = ({ calculateResult, setResult }) => {
         setAmountExchange("");
         setCurrency("EUR")
         setResult("");
+    };
+    const calculateResult = (amountExchange, currency) => {
+        const rateExchange = currencies.find(({ short }) => short === currency).rate;
+        const currencyFinal = currencies.find(({ short }) => short === currency).short;
+
+        setResult((+amountExchange / rateExchange).toFixed(2) + currencyFinal);
     };
 
 
@@ -59,14 +68,19 @@ const Form = ({ calculateResult, setResult }) => {
                 </select>
                 <p className="form__caution">*Kurs NBP z dnia 14.09.2022</p>
             </fieldset>
- 
+
             <p>
-                <button className="form__button">Przelicz</button>
-                <input
-                    className="form__button form__button--reset"
-                    type="reset"
-                    value="Wyczyść"
-                />
+                <fieldset className="form__fieldset">
+                    <legend className="form__legend">Wynik:</legend>
+
+                    <button className="form__button">Przelicz</button>
+                    <p className="form__result">
+                        Za tę kwotę otrzymasz: <strong> {result} </strong>
+                    </p>
+                    <button className="form__button form__button--reset" type="reset">Wyczyść</button>
+
+                </fieldset>
+
             </p>
         </form>
     )

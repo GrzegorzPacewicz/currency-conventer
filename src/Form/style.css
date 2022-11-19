@@ -1,5 +1,5 @@
 .form {
-    padding: 20px 20px 0 20px;
+    padding: 30px;
     text-align: center;
     margin: 0 auto;
     background: aliceblue;
@@ -8,6 +8,12 @@
 .form__caution {
     padding: 5px;
     text-align: left;
+}
+
+.form__header {
+    font-size: 40px;
+    color: #124149;
+    text-rendering: optimizeLegibility;
 }
 
 .form__fieldset {
@@ -30,6 +36,7 @@
     padding: 10px;
     margin-left: 5px;
     text-align: center;
+    
 }
 
 .form__select {
@@ -48,16 +55,16 @@
 .form__button {
     padding: 12px;
     color: #fff;
-    background: #1d8294;
+    background: hsl(189, 67%, 35%);
     border: 1px;
 }
 
 .form__button:hover {
-    background: hsl(189, 67%, 40%);
+    background: hsl(189, 67%, 42%);
 }
 
 .form__button:active {
-    background: #1c1c49;
+    background:  hsl(189, 67%, 50%);
 }
 
 .form__result {
@@ -66,5 +73,6 @@
 }
 
 .form__button--reset {
-    margin: 5px;
+    width: 100%;
+    max-width: 450px;
 }
