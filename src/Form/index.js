@@ -1,33 +1,42 @@
 import "./style.css";
 import { useState } from "react";
+import "./style.css";
 import { currencies } from "../Currencies/currency"
 
+
+
 const Form = () => {
-    const [amountExchange, setAmountExchange] = useState("");
-    const [currency, setCurrency] = useState(currencies[0].short);
-    const [result, setResult] = useState(null);
+  const [amountExchange, setAmountExchange] = useState("");
+  const [currency, setCurrency] = useState(currencies[0].short);
+  const [result, setResult] = useState(null);
 
-    const onFormSubmit = (event) => {
-        event.preventDefault();
-        calculateResult(amountExchange, currency);
-    };
+  const onFormSubmit = (event) => {
+    event.preventDefault();
+    calculateResult(amountExchange, currency);
+  };
 
-    const onFormReset = () => {
-        setAmountExchange("");
-        setCurrency("EUR")
-        setResult("");
-    };
+  const onFormReset = () => {
+    setAmountExchange("");
+    setCurrency("EUR");
+    setResult("");
+  };
 
-    const calculateResult = (amountExchange, currency) => {
-        const rateExchange = currencies.find(({ short }) => short === currency).rate;
-        const currencyExchanged = currencies.find(({ short }) => short === currency).short;
+  const calculateResult = (amountExchange, currency) => {
+    const rateExchange = currencies.find(
+      ({ short }) => short === currency
+    ).rate;
+    const currencyExchanged = currencies.find(
+      ({ short }) => short === currency
+    ).short;
 
-        setResult(`${(+amountExchange / rateExchange).toFixed(2)} ${currencyExchanged}`);
-    };
+    setResult(
+      `${(+amountExchange / rateExchange).toFixed(2)} ${currencyExchanged}`
+    );
+  };
+
 
     return (
-        <form
-            className="form"
+        <form className="form"
             onSubmit={onFormSubmit}
             onReset={onFormReset}
         >
@@ -46,7 +55,6 @@ const Form = () => {
                     />
                 </label>
             </fieldset>
-
             <fieldset className="form__fieldset">
                 <legend className="form__legend">Przelicz na*:</legend>
                 <select
@@ -65,7 +73,7 @@ const Form = () => {
 
                     ))}
                 </select>
-                <p className="form__caution">*Kurs NBP z dnia 21.11.2022</p>
+                <p className="form__caution">*Kurs NBP z dnia 14.09.2022</p>
             </fieldset>
 
             <p>
