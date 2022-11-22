@@ -11,6 +11,7 @@ The project I make during FrondEndDeveloper course: https://youcode.pl/frontend-
 1. Put amount of currency you want to exchange in the field "Kwota do przeliczenia"
 2. Choose currency in the field "Przelicz na"
 3. Press "Otrzymasz" to see how much money You will get.
+4. Press "Wyczyść" to reset form.
 
 ![Demonstration](./src/images/animation.gif)
 
