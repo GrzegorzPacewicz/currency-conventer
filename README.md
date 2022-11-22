@@ -27,6 +27,6 @@ The project I make during FrondEndDeveloper course: https://youcode.pl/frontend-
 - JSX
 - React
 
-# Getting Started with Create React App
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
