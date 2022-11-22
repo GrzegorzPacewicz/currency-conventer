@@ -65,8 +65,7 @@ const Form = () => {
                 </select>
                 <p className="form__caution">*Kurs NBP z dnia 21.11.2022</p>
             </fieldset>
-
-            <p>
+ 
                 <fieldset className="form__fieldset">
                     <legend className="form__legend">Wynik:</legend>
                     <button className="form__button">Przelicz</button>
@@ -75,7 +74,7 @@ const Form = () => {
                     </p>
                 </fieldset>
                 <button className="form__button form__button--reset" type="reset">Wyczyść</button>
-            </p>
+         
         </form>
     )
 };
