@@ -65,16 +65,16 @@ const Form = () => {
                 </select>
                 <p className="form__caution">*Kurs NBP z dnia 21.11.2022</p>
             </fieldset>
- 
-                <fieldset className="form__fieldset">
-                    <legend className="form__legend">Wynik:</legend>
-                    <button className="form__button">Przelicz</button>
-                    <p className="form__result">
-                        Za tę kwotę otrzymasz: <strong> {result} </strong>
-                    </p>
-                </fieldset>
-                <button className="form__button form__button--reset" type="reset">Wyczyść</button>
-         
+
+            <fieldset className="form__fieldset">
+                <legend className="form__legend">Wynik:</legend>
+                <button className="form__button">Przelicz</button>
+                <p className="form__result">
+                    Za tę kwotę otrzymasz: <strong> {result} </strong>
+                </p>
+            </fieldset>
+            <button className="form__button form__button--reset" type="reset">Wyczyść</button>
+
         </form>
     )
 };

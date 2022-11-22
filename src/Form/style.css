@@ -13,7 +13,6 @@
 }
 
 .form__caution {
-    padding: 5px;
     text-align: left;
 }
 
@@ -25,7 +24,7 @@
 
 .form__fieldset {
     text-align: center;
-    margin: 20px auto;
+    margin: 10px auto;
     padding: 20px;
     border-color: #1d8294;
 }
@@ -41,7 +40,6 @@
     padding: 10px;
     margin-left: 5px;
     text-align: center;
-
 }
 
 .form__select {
