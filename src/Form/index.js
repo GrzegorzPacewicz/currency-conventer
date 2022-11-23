@@ -6,8 +6,8 @@ const Form = () => {
     const [amountExchange, setAmountExchange] = useState("");
     const [currency, setCurrency] = useState(currencies[0].short);
     const [result, setResult] = useState(null);
-    const DEFAULT_CURRENCY = currencies[0].short;
-
+    // const DEFAULT_CURRENCY = currencies[0].short
+    
     const onFormSubmit = (event) => {
         event.preventDefault();
         calculateResult(amountExchange, currency);
@@ -16,7 +16,8 @@ const Form = () => {
     const onFormReset = () => {
         setAmountExchange("");
         setResult("");
-        DEFAULT_CURRENCY("EUR");
+        setCurrency("EUR");
+        // DEFAULT_CURRENCY("EUR");
     }
 
     const calculateResult = (amountExchange, currency) => {
