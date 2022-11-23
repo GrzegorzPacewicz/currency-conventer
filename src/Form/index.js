@@ -6,8 +6,7 @@ const Form = () => {
   const [amountExchange, setAmountExchange] = useState("");
   const [currency, setCurrency] = useState(currencies[0].short);
   const [result, setResult] = useState(null);
-  const DEFAULT_CURRENCY = currencies[0].short;
-
+ 
   const onFormSubmit = (event) => {
     event.preventDefault();
     calculateResult(amountExchange, currency);
@@ -15,7 +14,7 @@ const Form = () => {
 
   const onFormReset = () => {
     setAmountExchange("");
-    DEFAULT_CURRENCY("EUR");
+    setCurrency("EUR");
     setResult("");
   };
 
@@ -24,12 +23,6 @@ const Form = () => {
 
     setResult(`${(+amountExchange / rate).toFixed(2)} ${short}`);
   };
-
-  // setResult(
-  //     `Za ${amountExchange} PLN otrzymasz: ${(+amountExchange / rate).toFixed(
-  //       2
-  //     )} ${short}`
-  //   );
 
   return (
     <form className="form" onSubmit={onFormSubmit} onReset={onFormReset}>
@@ -94,7 +87,8 @@ export default Form;
 //             <input
 //                 className="form__inputAmount"
 //                 type="number"
-//                 required min="0.01"
+//                 required
+//                  min="0.01"
 //                 step="0.01"
 //                 placeholder="Wpisz kwotę"
 //                 value={amountExchange}
