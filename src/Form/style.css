@@ -16,12 +16,6 @@
     text-align: left;
 }
 
-.form__header {
-    font-size: 40px;
-    color: #124149;
-    text-rendering: optimizeLegibility;
-}
-
 .form__fieldset {
     text-align: center;
     margin: 10px auto;
