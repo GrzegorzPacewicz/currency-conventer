@@ -6,6 +6,7 @@ const Form = () => {
     const [amountExchange, setAmountExchange] = useState("");
     const [currency, setCurrency] = useState(currencies[0].short);
     const [result, setResult] = useState(null);
+    const DEFAULT_CURRENCY = currencies[0].short;
 
     const onFormSubmit = (event) => {
         event.preventDefault();
@@ -14,15 +15,14 @@ const Form = () => {
 
     const onFormReset = () => {
         setAmountExchange("");
-        setCurrency("EUR");
         setResult("");
+        DEFAULT_CURRENCY("EUR");
     };
 
     const calculateResult = (amountExchange, currency) => {
-        const rateExchange = currencies.find(({ short }) => short === currency).rate;
-        const currencyExchanged = currencies.find(({ short }) => short === currency).short;
+        const { rate, short } = currencies.find(({ short }) => short === currency);
 
-        setResult(`${(+amountExchange / rateExchange).toFixed(2)} ${currencyExchanged}`);
+        setResult(`${(+amountExchange / rate).toFixed(2)} ${short}`);
     };
 
     return (
@@ -37,7 +37,8 @@ const Form = () => {
                     <input
                         className="form__inputAmount"
                         type="number"
-                        required min="0.01"
+                        required 
+                        min="0.01"
                         step="0.01"
                         placeholder="Wpisz kwotę"
                         value={amountExchange}
@@ -80,3 +81,4 @@ const Form = () => {
 };
 
 export default Form;
+
