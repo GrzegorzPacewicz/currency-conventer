@@ -2,9 +2,11 @@ import "./style.css";
 import { useState } from "react";
 import { currencies } from "../Currencies/currencies";
 
+const DEFAULT_CURRENCY = currencies[0].short;
+
 const Form = () => {
   const [amountExchange, setAmountExchange] = useState("");
-  const [currency, setCurrency] = useState(currencies[0].short);
+  const [currency, setCurrency] = useState(DEFAULT_CURRENCY);
   const [result, setResult] = useState(null);
  
   const onFormSubmit = (event) => {
@@ -14,7 +16,7 @@ const Form = () => {
 
   const onFormReset = () => {
     setAmountExchange("");
-    setCurrency("EUR");
+    setCurrency(DEFAULT_CURRENCY);
     setResult("");
   };
 

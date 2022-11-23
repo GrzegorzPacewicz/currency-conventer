@@ -1,74 +1,74 @@
 .form {
-    padding: 0 20px;
-    text-align: center;
-    margin: 0 auto;
-    background: aliceblue;
+  padding: 0 20px;
+  text-align: center;
+  margin: 0 auto;
+  background: aliceblue;
 }
 
 @media (max-width: 767px) {
-    .form {
-        padding: 0;
-        margin: 0;
-    }
+  .form {
+    padding: 0;
+    margin: 0;
+  }
 }
 
 .form__caution {
-    text-align: left;
+  text-align: left;
+  margin: 10px 0;
 }
 
 .form__fieldset {
-    text-align: center;
-    margin: 10px auto;
-    padding: 20px;
-    border-color: #1d8294;
+  text-align: center;
+  margin: 10px auto;
+  padding: 10px;
 }
 
 .form__legend {
-    text-align: left;
-    border: 1px solid #333;
-    padding: 5px;
-    border-color: #1d8294;
+  text-align: left;
+  border: 1px solid #333;
+  padding: 5px;
 }
 
 .form__inputAmount {
-    padding: 10px;
-    margin-left: 5px;
-    text-align: center;
+  padding: 10px;
+  margin-left: 5px;
+  text-align: center;
 }
 
 .form__select {
-    padding: 10px;
+  padding: 10px;
 }
 
 .form__option {
-    color: #fff;
-    background: #1d8294;
+  color: #fff;
+  background: #1d8294;
 }
 
 .form__option:hover {
-    background: #1d8294;
+  background: #1d8294;
 }
 
 .form__button {
-    padding: 12px;
-    color: #fff;
-    background: hsl(189, 67%, 35%);
-    border: 1px;
-    width: 100px;}
+  padding: 12px;
+  color: #fff;
+  background: hsl(189, 67%, 35%);
+  border: 1px;
+  width: 100px;
+}
 
 .form__button:hover {
-    background: hsl(189, 67%, 42%);
+  background: hsl(189, 67%, 42%);
 }
 
 .form__button:active {
-    background: hsl(189, 67%, 50%);
+  background: hsl(189, 67%, 50%);
 }
 
 .form__result {
-    padding: 10px;
-    margin-left: 5px;
+  padding: 10px;
+  margin-left: 5px;
 }
 
 .form__button--reset {
-    width: 100%;
+  width: 100%;
 }
