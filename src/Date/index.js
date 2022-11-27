@@ -24,7 +24,7 @@ const Clock = () => {
     };
   }, []);
 
-  return <header className="clock">Jest {dateFormat(theDate)}</header>;
+  return <header className="date">Jest {dateFormat(theDate)}</header>;
 };
 
 export default Clock;
