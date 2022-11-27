@@ -1,13 +1,13 @@
 import Form from "./Form";
 import Container from "./Container";
 import Header from "./Header";
-import Date from "./Date"
+import Clock from "./Clock"
 
 function App() {
   return (
     <Container>
       <Header title="Kalkulator walut" />
-      <Date />
+      <Clock />
       <Form />
     </Container>
   );
