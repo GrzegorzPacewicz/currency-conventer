@@ -13,7 +13,7 @@ The project I make during FrondEndDeveloper course: https://youcode.pl/frontend-
 3. Press "Otrzymasz" to see how much money You will get.
 4. Press "Wyczyść" to reset form.
 
-![Demonstration](./src/images/animation.gif)
+![Demonstration](animation.gif)
 
 ## Technologies used
 - html
@@ -26,6 +26,7 @@ The project I make during FrondEndDeveloper course: https://youcode.pl/frontend-
 - md
 - JSX
 - React
+- local storage
 
 ## Getting Started with Create React App
 
