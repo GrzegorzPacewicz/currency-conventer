@@ -1,7 +1,7 @@
 import "./style.css";
 import { useState, useEffect } from "react";
 
-const dateFormat = (date) =>
+const formatDate = (date) =>
   date.toLocaleString(undefined, {
     day: "numeric",
     month: "numeric",
@@ -12,11 +12,11 @@ const dateFormat = (date) =>
   });
 
 const Clock = () => {
-  const [theDate, setTheDate] = useState(new Date());
+  const [date, setDate] = useState(new Date());
 
   useEffect(() => {
     const intervalId = setInterval(() => {
-      setTheDate(new Date());
+      setDate(new Date());
     }, 1000);
 
     return () => {
@@ -24,7 +24,7 @@ const Clock = () => {
     };
   }, []);
 
-  return <header className="clock">Jest {dateFormat(theDate)}</header>;
+  return <div className="clock">Jest {formatDate(date)}</div>;
 };
 
 export default Clock;
