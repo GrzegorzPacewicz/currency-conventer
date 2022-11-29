@@ -12,11 +12,11 @@ const formatDate = (date) =>
   });
 
 const Clock = () => {
-  const [day, setDay] = useState(new Date());
+  const [date, setDate] = useState(new Date());
 
   useEffect(() => {
     const intervalId = setInterval(() => {
-      setDay(new Date());
+      setDate(new Date());
     }, 1000);
 
     return () => {
@@ -24,7 +24,7 @@ const Clock = () => {
     };
   }, []);
 
-  return <div className="clock">Jest {formatDate(day)}</div>;
+  return <div className="clock">Dziś jest {formatDate(date)}</div>;
 };
 
 export default Clock;
