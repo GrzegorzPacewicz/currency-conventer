@@ -1,4 +1,4 @@
-import "./style.css";
+import { StyledClock } from "./styled";
 import { useState, useEffect } from "react";
 
 const formatDate = (date) =>
@@ -24,7 +24,7 @@ const Clock = () => {
     };
   }, []);
 
-  return <div className="clock">Dziś jest {formatDate(date)}</div>;
+  return <StyledClock>Dziś jest {formatDate(date)}</StyledClock>;
 };
 
 export default Clock;
