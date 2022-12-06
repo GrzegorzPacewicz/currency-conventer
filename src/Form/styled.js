@@ -50,23 +50,11 @@ export const FormButton = styled.button`
     background: hsl(189, 67%, 42%);
   }
 
-  .&:active {
+  &:active {
     background: hsl(189, 67%, 50%);
   }
 `;
 
-export const FormButtonReset = styled.button`
-  padding: 12px;
-  color: #fff;
-  background: hsl(189, 67%, 35%);
-  border: 1px;
-  width: 100%;
-  
-  &:hover {
-    background: hsl(189, 67%, 42%);
-  }
-
-  .&:active {
-    background: hsl(189, 67%, 50%);
-  }
+export const FormButtonReset = styled(FormButton)`
+width: 100%
 `;
