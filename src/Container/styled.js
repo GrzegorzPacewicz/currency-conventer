@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Wrapper = styled.main`
+export const Container = styled.main`
   overflow-x: auto;
   margin: 10px;
   width: 450px;

@@ -1,7 +1,7 @@
 import Form from "./Form";
-import Container from "./Container";
 import Header from "./Header";
-import Clock from "./Clock"
+import Clock from "./Clock";
+import { Container } from "./Container/styled";
 
 function App() {
   return (
