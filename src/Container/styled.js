@@ -17,8 +17,7 @@ export const Container = styled.main`
     flex-basis: 700px;
     min-width: 300px;
     background-color: aliceblue;
-    padding-bottom: 20px;
     margin: 0 10px;
-    padding: 0 10px;
+    padding: 0 10px 20px;
   }
 `;
