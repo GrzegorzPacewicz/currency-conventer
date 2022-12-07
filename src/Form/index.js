@@ -76,9 +76,7 @@ const Form = () => {
           Za tę kwotę otrzymasz: <strong> {result} </strong>
         </p>
       </FormFieldset>
-      <FormButtonReset type="reset">
-        Wyczyść
-      </FormButtonReset>
+      <FormButtonReset type="reset">Wyczyść</FormButtonReset>
     </StyledForm>
   );
 };

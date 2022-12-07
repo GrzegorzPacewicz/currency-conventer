@@ -56,5 +56,5 @@ export const FormButton = styled.button`
 `;
 
 export const FormButtonReset = styled(FormButton)`
-width: 100%
+  width: 100%;
 `;
