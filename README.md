@@ -27,6 +27,9 @@ The project I make during FrondEndDeveloper course: https://youcode.pl/frontend-
 - JSX
 - React
 - local storage
+- styled components
+- useRef, useState, useEffect
+- custom hook
 
 ## Getting Started with Create React App
 

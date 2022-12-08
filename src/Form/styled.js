@@ -23,7 +23,6 @@ export const FormFieldset = styled.fieldset`
   @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
     padding: 10px;
   }
-
 `;
 
 export const FormLegend = styled.legend`
@@ -54,7 +53,7 @@ export const FormButton = styled.button`
   }
 
   &:active {
-    filter: brightness(130%);
+    filter: brightness(120%);
   }
 `;
 
