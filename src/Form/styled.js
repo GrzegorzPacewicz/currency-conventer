@@ -4,11 +4,9 @@ export const StyledForm = styled.form`
   padding: 0 20px;
   text-align: center;
   margin: 0 auto;
-  background: aliceblue;
-
-  @media (max-width: 767px) {
+  background: ${({ theme }) => theme.color.pastelgreen};
+  @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
     padding: 0;
-    margin: 0;
   }
 `;
 
@@ -20,12 +18,17 @@ export const Caution = styled.p`
 export const FormFieldset = styled.fieldset`
   text-align: center;
   margin: 10px auto;
-  padding: 10px;
+  padding: 15px 10px;
+  border: 1px solid ${({ theme }) => theme.color.teal};
+  @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+    padding: 10px;
+  }
+
 `;
 
 export const FormLegend = styled.legend`
   text-align: left;
-  border: 1px solid #333;
+  border: 1px solid ${({ theme }) => theme.color.teal};
   padding: 5px;
 `;
 
@@ -42,16 +45,16 @@ export const FormSelect = styled.select`
 export const FormButton = styled.button`
   padding: 12px;
   color: #fff;
-  background: hsl(189, 67%, 35%);
+  background: ${({ theme }) => theme.color.teal};
   border: 1px;
   width: 100px;
 
   &:hover {
-    background: hsl(189, 67%, 42%);
+    filter: brightness(110%);
   }
 
   &:active {
-    background: hsl(189, 67%, 50%);
+    filter: brightness(130%);
   }
 `;
 

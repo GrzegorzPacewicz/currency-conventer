@@ -12,20 +12,11 @@ export const GlobalStyle = createGlobalStyle`
 
     body {
       font-family: 'Roboto', sans-serif;
-      color: #222227;
-      margin: 0 auto;
-      padding: 0 20px;
+      color: ${({ theme }) => theme.color.black};
       text-align: center;
       background-image: url("${background}");
       display: flex;
       align-items: center;
       justify-content: center;
-}
-
-@media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) 
- {
-    background-image: none;
-    margin: 0 10px;
-    padding: 10px;
 }
 `;
