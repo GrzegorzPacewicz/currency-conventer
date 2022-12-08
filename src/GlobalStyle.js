@@ -18,5 +18,9 @@ export const GlobalStyle = createGlobalStyle`
       display: flex;
       align-items: center;
       justify-content: center;
-}
+      @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) 
+ {
+      background-image: none;
+    }
+    }
 `;
