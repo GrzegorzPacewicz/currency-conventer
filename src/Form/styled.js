@@ -47,6 +47,7 @@ export const FormButton = styled.button`
   background: ${({ theme }) => theme.color.teal};
   border: 1px;
   width: 100px;
+  cursor: pointer;
 
   &:hover {
     filter: brightness(110%);
