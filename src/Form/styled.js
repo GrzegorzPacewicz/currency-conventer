@@ -5,7 +5,7 @@ export const StyledForm = styled.form`
   text-align: center;
   margin: 0 auto;
   background: ${({ theme }) => theme.color.pastelgreen};
-  @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
     padding: 0;
   }
 `;
@@ -16,8 +16,10 @@ export const Caution = styled.p`
   padding: 10px 0 0 0;
 `;
 
-export const FormResult = styled(Caution)`
-text-align: center;
+export const FormResult = styled.p`
+  text-align: center;
+  margin: 0;
+  padding: 0 0 10px;
 `;
 
 export const FormFieldset = styled.fieldset`
@@ -25,7 +27,7 @@ export const FormFieldset = styled.fieldset`
   margin: 10px auto;
   padding: 15px 10px;
   border: 1px solid ${({ theme }) => theme.color.teal};
-  @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
     padding: 10px;
   }
 `;
