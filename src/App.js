@@ -6,8 +6,8 @@ import { Container } from "./Container/styled";
 function App() {
   return (
     <Container>
-      <Header title="Kalkulator walut" />
       <Clock />
+      <Header title="Kalkulator walut" />
       <Form />
     </Container>
   );
