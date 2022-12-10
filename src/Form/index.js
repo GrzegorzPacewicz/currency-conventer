@@ -39,18 +39,16 @@ const Form = () => {
     <StyledForm onSubmit={onFormSubmit} onReset={onFormReset}>
       <FormFieldset>
         <FormLegend>Kwota do przeliczenia:</FormLegend>
-        <label className="form__label">
-          <span>PLN</span>
-          <FormInput
-            type="number"
-            required
-            min="0.01"
-            step="0.01"
-            placeholder="Wpisz kwotę"
-            value={amountExchange}
-            onChange={({ target }) => setAmountExchange(target.value)}
-          />
-        </label>
+        <span>PLN</span>
+        <FormInput
+          type="number"
+          required
+          min="0.01"
+          step="0.01"
+          placeholder="Wpisz kwotę"
+          value={amountExchange}
+          onChange={({ target }) => setAmountExchange(target.value)}
+        />
       </FormFieldset>
 
       <FormFieldset>
