@@ -13,6 +13,7 @@ export const StyledForm = styled.form`
 export const Caution = styled.p`
   text-align: left;
   margin: 10px 0;
+  padding: 10px 0 0 0;
 `;
 
 export const FormFieldset = styled.fieldset`
@@ -46,7 +47,7 @@ export const FormButton = styled.button`
   color: #fff;
   background: ${({ theme }) => theme.color.teal};
   border: 1px;
-  width: 100px;
+  width: 100%;
   cursor: pointer;
 
   &:hover {
@@ -56,8 +57,4 @@ export const FormButton = styled.button`
   &:active {
     filter: brightness(120%);
   }
-`;
-
-export const FormButtonReset = styled(FormButton)`
-  width: 100%;
 `;
