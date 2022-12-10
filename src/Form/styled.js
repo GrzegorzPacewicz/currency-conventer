@@ -16,6 +16,10 @@ export const Caution = styled.p`
   padding: 10px 0 0 0;
 `;
 
+export const FormResult = styled(Caution)`
+text-align: center;
+`;
+
 export const FormFieldset = styled.fieldset`
   text-align: center;
   margin: 10px auto;

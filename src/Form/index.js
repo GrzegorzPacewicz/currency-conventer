@@ -6,6 +6,7 @@ import {
   FormInput,
   FormSelect,
   FormButton,
+  FormResult,
 } from "./styled";
 import { useState } from "react";
 import { currencies } from "../Currencies/currencies";
@@ -70,9 +71,9 @@ const Form = () => {
 
       <FormFieldset>
         <FormLegend>Wynik:</FormLegend>
-       <Caution>Za tę kwotę otrzymasz: <strong> {result} </strong></Caution>
-          
-        
+        <FormResult>
+          Za tę kwotę otrzymasz: <strong> {result} </strong>
+        </FormResult>
       </FormFieldset>
       <FormButton>Przelicz</FormButton>
     </StyledForm>
