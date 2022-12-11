@@ -14,6 +14,7 @@ export const Caution = styled.p`
   text-align: left;
   margin: 10px 0;
   padding: 10px 0 0 0;
+  font-size: small;
 `;
 
 export const FormResult = styled.p`
@@ -50,6 +51,7 @@ export const FormSelect = styled.select`
 
 export const FormButton = styled.button`
   padding: 12px;
+  margin: 10px 0;
   color: #fff;
   background: ${({ theme }) => theme.color.teal};
   border: 1px;

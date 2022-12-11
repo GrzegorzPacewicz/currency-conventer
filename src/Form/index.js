@@ -10,6 +10,7 @@ import {
 } from "./styled";
 import { useState } from "react";
 import { currencies } from "../Currencies/currencies";
+import axios from "axios";
 
 const DEFAULT_CURRENCY = currencies[0].short;
 
@@ -34,6 +35,10 @@ const Form = () => {
 
     setResult(`${(+amountExchange / rate).toFixed(2)} ${short}`);
   };
+
+  axios.get("https://api.exchangerate.host/latest?base=PLN")
+  .then(response => console.log(response.data))
+  .catch(error => console.error(error));
 
   return (
     <StyledForm onSubmit={onFormSubmit} onReset={onFormReset}>
