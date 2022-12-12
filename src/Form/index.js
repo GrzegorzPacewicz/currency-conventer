@@ -36,9 +36,19 @@ const Form = () => {
     setResult(`${(+amountExchange / rate).toFixed(2)} ${short}`);
   };
 
-  axios.get("https://api.exchangerate.host/latest?base=PLN")
-  .then(response => console.log(response.data))
-  .catch(error => console.error(error));
+
+  (async () => {
+ try {
+ const response = await axios.get("https://api.exchangerate.host/latest?base=PLN&symbols=EUR,USD,GBP");
+ console.log(response.data);
+ } catch (error) {
+ console.error("Oj, coś niedobrze jest!", error);
+ }
+})();
+
+  // axios.get("https://api.exchangerate.host/latest?base=PLN")
+  // .then(response => console.log(response.data))
+  // .catch(error => console.error(error));
 
   return (
     <StyledForm onSubmit={onFormSubmit} onReset={onFormReset}>
