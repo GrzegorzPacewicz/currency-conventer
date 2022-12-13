@@ -9,49 +9,31 @@ import {
   FormResult,
 } from "./styled";
 import { useState } from "react";
-import { currencies } from "../Currencies/currencies";
-import axios from "axios";
+import { useRatesData } from "../useRatesData";
 
-const DEFAULT_CURRENCY = currencies[0].short;
+const DEFAULT_CURRENCY = "EUR";
 
 const Form = () => {
   const [amountExchange, setAmountExchange] = useState("");
   const [currency, setCurrency] = useState(DEFAULT_CURRENCY);
   const [result, setResult] = useState(null);
+  const ratesData = useRatesData();
+
 
   const onFormSubmit = (event) => {
     event.preventDefault();
     calculateResult(amountExchange, currency);
   };
 
-  const onFormReset = () => {
-    setAmountExchange("");
-    setCurrency(DEFAULT_CURRENCY);
-    setResult("");
-  };
 
   const calculateResult = (amountExchange, currency) => {
-    const { rate, short } = currencies.find(({ short }) => short === currency);
+    const rateExchange = ratesData.rates[currency];
 
-    setResult(`${(+amountExchange / rate).toFixed(2)} ${short}`);
+    setResult(`${(+amountExchange * rateExchange).toFixed(2)} ${[currency]}`);
   };
 
-
-  (async () => {
- try {
- const response = await axios.get("https://api.exchangerate.host/latest?base=PLN&symbols=EUR,USD,GBP");
- console.log(response.data);
- } catch (error) {
- console.error("Oj, coś niedobrze jest!", error);
- }
-})();
-
-  // axios.get("https://api.exchangerate.host/latest?base=PLN")
-  // .then(response => console.log(response.data))
-  // .catch(error => console.error(error));
-
   return (
-    <StyledForm onSubmit={onFormSubmit} onReset={onFormReset}>
+    <StyledForm onSubmit={onFormSubmit}>
       <FormFieldset>
         <FormLegend>Kwota do przeliczenia:</FormLegend>
         <span>PLN</span>
@@ -73,11 +55,11 @@ const Form = () => {
           value={currency}
           onChange={({ target }) => setCurrency(target.value)}
         >
-          {currencies.map((currency) => (
-            <option key={currency.short} value={currency.short}>
-              {currency.name}
+      {Object.keys(ratesData.rates).map(((currency) => (
+            <option key={currency} value={currency}>
+              {currency}
             </option>
-          ))}
+          )))}
         </FormSelect>
         <Caution>*Kurs NBP z dnia 21.11.2022</Caution>
       </FormFieldset>

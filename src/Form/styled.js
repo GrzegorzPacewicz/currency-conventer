@@ -66,3 +66,11 @@ export const FormButton = styled.button`
     filter: brightness(120%);
   }
 `;
+
+export const Loading = styled.p`
+color: ${({ theme }) => theme.color.teal};
+`;
+
+export const Failure = styled.p`
+color: ${({ theme }) => theme.color.red};
+`;
