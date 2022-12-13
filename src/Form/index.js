@@ -56,7 +56,7 @@ const Form = () => {
           </FormFieldset>
 
           <FormFieldset>
-            <FormLegend>Przelicz na*:</FormLegend>
+            <FormLegend>Wybierz walutę:</FormLegend>
             <FormSelect
               value={currency}
               onChange={({ target }) => setCurrency(target.value)}
@@ -67,13 +67,13 @@ const Form = () => {
                 </option>
               ))}
             </FormSelect>
-            <Caution>*Kurs EBC z dnia {date} </Caution>
+            <Caution>Kurs EBC z dnia {date} </Caution>
           </FormFieldset>
 
           <FormFieldset>
             <FormLegend>Wynik:</FormLegend>
             <FormResult>
-              Za kwotę <strong>{amountExchange} PLN</strong> otrzymasz:{" "}
+              Za <strong>{amountExchange} PLN</strong> otrzymasz:{" "}
               <strong> {result} </strong>
             </FormResult>
           </FormFieldset>
