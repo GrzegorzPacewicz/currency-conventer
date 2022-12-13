@@ -29,7 +29,7 @@ The project I make during FrondEndDeveloper course: https://youcode.pl/frontend-
 - local storage
 - styled components
 - custom hook: useRef, useState, useEffect
-- axios
+- axios, API
 
 ## Getting Started with Create React App
 
