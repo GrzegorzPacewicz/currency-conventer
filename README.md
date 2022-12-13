@@ -28,8 +28,8 @@ The project I make during FrondEndDeveloper course: https://youcode.pl/frontend-
 - React
 - local storage
 - styled components
-- useRef, useState, useEffect
-- custom hook
+- custom hook: useRef, useState, useEffect
+- axios
 
 ## Getting Started with Create React App
 
