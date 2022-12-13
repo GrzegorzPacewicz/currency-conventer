@@ -19,7 +19,6 @@ const Form = () => {
   const [result, setResult] = useState(null);
   const ratesData = useRatesData();
 
-
   const onFormSubmit = (event) => {
     event.preventDefault();
     calculateResult(amountExchange, currency);
@@ -33,6 +32,7 @@ const Form = () => {
   };
 
   return (
+    ratesData.status === "success" &&
     <StyledForm onSubmit={onFormSubmit}>
       <FormFieldset>
         <FormLegend>Kwota do przeliczenia:</FormLegend>
@@ -51,7 +51,7 @@ const Form = () => {
       <FormFieldset>
         <FormLegend>Przelicz na*:</FormLegend>
         <FormSelect
-          name="currencyConverted"
+         
           value={currency}
           onChange={({ target }) => setCurrency(target.value)}
         >
@@ -67,7 +67,7 @@ const Form = () => {
       <FormFieldset>
         <FormLegend>Wynik:</FormLegend>
         <FormResult>
-          Za tę kwotę otrzymasz: <strong> {result} </strong>
+          Za kwotę <strong>{amountExchange} PLN</strong> otrzymasz: <strong> {result} </strong>
         </FormResult>
       </FormFieldset>
       <FormButton>Przelicz</FormButton>
