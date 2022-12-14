@@ -9,11 +9,12 @@ export const Container = styled.main`
   box-shadow: 0 0 10px ${({ theme }) => theme.color.black};
   background-color: ${({ theme }) => theme.color.pastelgreen};
   padding-bottom: 20px;
+  min-height: 660px;
 
   @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
     width: 350px;
     border-radius: 0;
     box-shadow: none;
-    padding: 0 10px 20px;
+    padding: 0 10px;
   }
 `;

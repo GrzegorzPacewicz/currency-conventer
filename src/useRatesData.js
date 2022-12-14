@@ -28,5 +28,3 @@ export const useRatesData = () => {
 
   return ratesData;
 };
-
-// &symbols=EUR,USD,GBP
