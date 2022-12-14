@@ -57,26 +57,26 @@ export const FormButton = styled.button`
   border: 1px;
   width: 100%;
   cursor: pointer;
-
   &:hover {
     filter: brightness(110%);
   }
-
   &:active {
     filter: brightness(120%);
   }
 `;
 
 export const Loading = styled.p`
-color: ${({ theme }) => theme.color.teal};
-padding: 200px 0;
-@media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+  color: ${({ theme }) => theme.color.teal};
+  padding: 197px 0;
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
     padding: 182px 0;
+  }
 `;
 
 export const Failure = styled.p`
-color: ${({ theme }) => theme.color.red};
-padding: 200px 0;
-@media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+  color: ${({ theme }) => theme.color.red};
+  padding: 197px 0;
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
     padding: 172px 0;
+  }
 `;
