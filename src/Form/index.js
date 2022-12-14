@@ -20,7 +20,6 @@ const Form = () => {
   const [currency, setCurrency] = useState(DEFAULT_CURRENCY);
   const [result, setResult] = useState(null);
   const ratesData = useRatesData();
-  const {date} = ratesData;
 
   const onFormSubmit = (event) => {
     event.preventDefault();
@@ -67,7 +66,7 @@ const Form = () => {
                 </option>
               ))}
             </FormSelect>
-            <Caution>Kurs EBC z dnia {date} </Caution>
+            <Caution>Kurs EBC z dnia {ratesData.date} </Caution>
           </FormFieldset>
 
           <FormFieldset>
