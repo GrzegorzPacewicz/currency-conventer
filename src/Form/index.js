@@ -20,6 +20,7 @@ const Form = () => {
   const [currency, setCurrency] = useState(DEFAULT_CURRENCY);
   const [result, setResult] = useState();
   const ratesData = useRatesData();
+  const {rates, date, status } = ratesData;
 
   const onFormSubmit = (event) => {
     event.preventDefault();
@@ -27,7 +28,7 @@ const Form = () => {
   };
 
   const calculateResult = (amountExchange, currency) => {
-    const rateExchange = ratesData.rates[currency];
+    const rateExchange = rates[currency];
 
     setResult({
       sourceAmount: +amountExchange,
@@ -38,9 +39,9 @@ const Form = () => {
 
   return (
     <StyledForm onSubmit={onFormSubmit}>
-      {ratesData.status === "loading" ? (
+      {status === "loading" ? (
         <Loading>Chwilka! 😃 Ładujemy dane....</Loading>
-      ) : ratesData.status === "error" ? (
+      ) : status === "error" ? (
         <Failure>Coś poszło nie tak! Nie możemy pobrać danych 😐</Failure>
       ) : (
         <>
@@ -64,13 +65,13 @@ const Form = () => {
               value={currency}
               onChange={({ target }) => setCurrency(target.value)}
             >
-              {Object.keys(ratesData.rates).map((currency) => (
+              {Object.keys(rates).map((currency) => (
                 <option key={currency} value={currency}>
                   {currency}
                 </option>
               ))}
             </FormSelect>
-            <Caution>Kurs EBC z dnia {ratesData.date} </Caution>
+            <Caution>Kurs EBC z dnia {date} </Caution>
           </FormFieldset>
 
           <FormFieldset>
