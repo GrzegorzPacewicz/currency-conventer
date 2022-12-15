@@ -4,7 +4,7 @@ const Footer = () => (
   <StyledFooter>
     © Grzegorz Pacewicz, 2022
     <Paragraph>
-      Kursy walut Europejskiego Banku Centralnego przy użyciu <Link href="https://exchangerate.host/"> https://exchangerate.host/</Link> 
+      Kursy walut Europejskiego Banku Centralnego przy użyciu <Link href="https://exchangerate.host/"> exchangerate.host</Link> 
     </Paragraph>
   </StyledFooter>
 );

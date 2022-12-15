@@ -13,14 +13,12 @@ import { useState } from "react";
 import { useRatesData } from "../useRatesData";
 import Result from "../Result";
 
-const DEFAULT_CURRENCY = "EUR";
-
 const Form = () => {
   const [amountExchange, setAmountExchange] = useState("");
-  const [currency, setCurrency] = useState(DEFAULT_CURRENCY);
+  const [currency, setCurrency] = useState("EUR");
   const [result, setResult] = useState();
   const ratesData = useRatesData();
-  const {rates, date, status } = ratesData;
+  const { rates, date, status } = ratesData;
 
   const onFormSubmit = (event) => {
     event.preventDefault();
@@ -46,8 +44,7 @@ const Form = () => {
       ) : (
         <>
           <FormFieldset>
-            <FormLegend>Kwota do przeliczenia:</FormLegend>
-            <span>PLN</span>
+            <FormLegend>Kwota do przeliczenia w PLN:</FormLegend>
             <FormInput
               type="number"
               required
@@ -76,7 +73,7 @@ const Form = () => {
 
           <FormFieldset>
             <FormLegend>Wynik:</FormLegend>
-            <Result result={result}> </Result>
+            <Result result={result} />
           </FormFieldset>
           <FormButton>Przelicz</FormButton>
         </>

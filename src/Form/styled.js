@@ -4,10 +4,11 @@ export const StyledForm = styled.form`
   padding: 0 20px;
   text-align: center;
   margin: 0 auto;
-  min-height: 440px;
+  min-height: 450px;
   background: ${({ theme }) => theme.color.pastelgreen};
   @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
     padding: 0;
+    min-height: 415px;
   }
 `;
 
@@ -17,6 +18,7 @@ export const Caution = styled.p`
   padding: 10px 0 0 0;
   font-size: small;
 `;
+
 export const FormFieldset = styled.fieldset`
   text-align: center;
   margin: 10px auto;
@@ -38,10 +40,15 @@ export const FormInput = styled.input`
   padding: 10px;
   margin-left: 5px;
   text-align: center;
+  max-width: 200px;
+  width: 100%;
 `;
 
 export const FormSelect = styled.select`
   padding: 10px;
+  max-width: 200px;
+  text-align: center;
+  width: 100%;
 `;
 
 export const FormButton = styled.button`
@@ -62,7 +69,7 @@ export const FormButton = styled.button`
 
 export const Loading = styled.p`
   color: ${({ theme }) => theme.color.teal};
-  padding-top: 200px;
+  padding-top: 150px;
  `;
 
 export const Failure = styled(Loading)`
