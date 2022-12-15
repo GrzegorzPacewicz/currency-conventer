@@ -8,8 +8,7 @@ export const Container = styled.main`
   border-radius: 30px;
   box-shadow: 0 0 10px ${({ theme }) => theme.color.black};
   background-color: ${({ theme }) => theme.color.pastelgreen};
-  padding-bottom: 20px;
-  min-height: 650px;
+
 
   @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
     width: 350px;

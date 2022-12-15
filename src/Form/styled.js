@@ -4,6 +4,7 @@ export const StyledForm = styled.form`
   padding: 0 20px;
   text-align: center;
   margin: 0 auto;
+  min-height: 440px;
   background: ${({ theme }) => theme.color.pastelgreen};
   @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
     padding: 0;
@@ -61,16 +62,9 @@ export const FormButton = styled.button`
 
 export const Loading = styled.p`
   color: ${({ theme }) => theme.color.teal};
-  padding: 202px 0;
-  @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
-    padding: 192px 0;
-  }
-`;
+  padding-top: 200px;
+ `;
 
-export const Failure = styled.p`
+export const Failure = styled(Loading)`
   color: ${({ theme }) => theme.color.red};
-  padding: 202px 0;
-  @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
-    padding: 182px 0;
-  }
-`;
+ `;
