@@ -1,11 +1,11 @@
-import { StyledFooter } from "./styled";
+import { StyledFooter, Link, Paragraph } from "./styled";
 
 const Footer = () => (
   <StyledFooter>
     © Grzegorz Pacewicz, 2022
-    <p>
-      Kursy walut Europejskiego Banku Centralnego przy użyciu <a href="https://exchangerate.host/">https://exchangerate.host/</a>
-    </p>
+    <Paragraph>
+      Kursy walut Europejskiego Banku Centralnego przy użyciu <Link href="https://exchangerate.host/"> https://exchangerate.host/</Link> 
+    </Paragraph>
   </StyledFooter>
 );
 

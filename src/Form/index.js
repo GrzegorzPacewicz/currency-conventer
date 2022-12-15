@@ -12,6 +12,7 @@ import {
 } from "./styled";
 import { useState } from "react";
 import { useRatesData } from "../useRatesData";
+import Result from "../Result";
 
 const DEFAULT_CURRENCY = "EUR";
 
@@ -29,7 +30,11 @@ const Form = () => {
   const calculateResult = (amountExchange, currency) => {
     const rateExchange = ratesData.rates[currency];
 
-    setResult(`${(+amountExchange * rateExchange).toFixed(2)} ${[currency]}`);
+    setResult({
+      sourceAmount: +amountExchange,
+      targetAmount: amountExchange * rateExchange,
+      currency,
+    });
   };
 
   return (
@@ -71,10 +76,10 @@ const Form = () => {
 
           <FormFieldset>
             <FormLegend>Wynik:</FormLegend>
-            <FormResult>
-              Za <strong>{amountExchange} PLN</strong> otrzymasz:{" "}
-              <strong> {result} </strong>
-            </FormResult>
+            <Result 
+           
+            >  result={result} 
+            </Result>
           </FormFieldset>
           <FormButton>Przelicz</FormButton>
         </>
