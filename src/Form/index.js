@@ -6,7 +6,6 @@ import {
   FormInput,
   FormSelect,
   FormButton,
-  FormResult,
   Loading,
   Failure,
 } from "./styled";
@@ -19,7 +18,7 @@ const DEFAULT_CURRENCY = "EUR";
 const Form = () => {
   const [amountExchange, setAmountExchange] = useState("");
   const [currency, setCurrency] = useState(DEFAULT_CURRENCY);
-  const [result, setResult] = useState(null);
+  const [result, setResult] = useState();
   const ratesData = useRatesData();
 
   const onFormSubmit = (event) => {
@@ -76,10 +75,7 @@ const Form = () => {
 
           <FormFieldset>
             <FormLegend>Wynik:</FormLegend>
-            <Result 
-           
-            >  result={result} 
-            </Result>
+            <Result result={result}> </Result>
           </FormFieldset>
           <FormButton>Przelicz</FormButton>
         </>

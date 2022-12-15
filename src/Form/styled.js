@@ -16,17 +16,11 @@ export const Caution = styled.p`
   padding: 10px 0 0 0;
   font-size: small;
 `;
-
-export const FormResult = styled.p`
-  text-align: center;
-  margin: 0;
-  padding: 0 0 10px;
-`;
-
 export const FormFieldset = styled.fieldset`
   text-align: center;
   margin: 10px auto;
   padding: 15px 10px;
+  min-height: 95px;
   border: 1px solid ${({ theme }) => theme.color.teal};
   @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
     padding: 10px;
@@ -67,16 +61,16 @@ export const FormButton = styled.button`
 
 export const Loading = styled.p`
   color: ${({ theme }) => theme.color.teal};
-  padding: 197px 0;
+  padding: 202px 0;
   @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
-    padding: 182px 0;
+    padding: 192px 0;
   }
 `;
 
 export const Failure = styled.p`
   color: ${({ theme }) => theme.color.red};
-  padding: 197px 0;
+  padding: 202px 0;
   @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
-    padding: 172px 0;
+    padding: 182px 0;
   }
 `;
