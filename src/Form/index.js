@@ -9,7 +9,7 @@ import {
   Loading,
   Failure,
 } from "./styled";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { useRatesData } from "../useRatesData";
 import Result from "../Result";
 
@@ -19,6 +19,7 @@ const Form = () => {
   const [result, setResult] = useState();
   const ratesData = useRatesData();
   const { rates, date, status } = ratesData;
+  const inputRef = useRef(null);
 
   const onFormSubmit = (event) => {
     event.preventDefault();
@@ -27,11 +28,13 @@ const Form = () => {
 
   const calculateResult = (amountExchange, currency) => {
     const rateExchange = rates[currency];
+    inputRef.current.focus();
 
     setResult({
       sourceAmount: +amountExchange,
       targetAmount: amountExchange * rateExchange,
       currency,
+      
     });
   };
 
@@ -51,6 +54,7 @@ const Form = () => {
               min="0.01"
               step="0.01"
               placeholder="Wpisz kwotę"
+              ref={inputRef}
               value={amountExchange}
               onChange={({ target }) => setAmountExchange(target.value)}
             />
