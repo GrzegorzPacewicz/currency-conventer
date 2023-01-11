@@ -16,6 +16,10 @@ export const StyledFooter = styled.div`
 export const Link = styled.a`
   color: black;
   text-decoration: none;
+  
+  &:hover {
+    border-bottom: 1px solid;
+  }
 `;
 
 export const Paragraph = styled(StyledFooter)`
