@@ -1,4 +1,4 @@
-# Kantor2.0 in React
+# Kantor
 
 ## [Demo version](https://grzegorzpacewicz.github.io/currency-conventer-react/)
 
@@ -7,10 +7,10 @@ The project I make during FrondEndDeveloper course: https://youcode.pl/frontend-
 
 ## Mannual
 
-1. Put amount of currency you want to exchange in the field "Kwota do przeliczenia"
+1. Put amount of currency you want to exchange in the field "Kwota do przeliczenia w PLN"
 2. Choose currency in the field "Przelicz na"
-3. Press "Otrzymasz" to see how much money You will get.
-4. Press "Wyczyść" to reset form.
+3. Press "Otrzymasz" to see how much money You will get
+4. Base currency is PLN
 
 ![Demonstration](animation.gif)
 
@@ -23,8 +23,8 @@ The project I make during FrondEndDeveloper course: https://youcode.pl/frontend-
 - grid
 - arrow functions
 - md
-- JSX
-- React
+- jsx
+- react
 - local storage
 - styled components
 - custom hook: useRef, useState, useEffect
