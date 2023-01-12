@@ -1,7 +1,6 @@
 # Kantor2.0 in React
 
-## Demo version: 
-https://grzegorzpacewicz.github.io/currency-conventer-react/
+## [Demo version](https://grzegorzpacewicz.github.io/currency-conventer-react/)
 
 ## Basic Info
 The project I make during FrondEndDeveloper course: https://youcode.pl/frontend-developer-od-podstaw
