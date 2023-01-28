@@ -9,7 +9,7 @@ export const Label = styled.label`
   align-items: center;
   gap: 10px;
   cursor: pointer;
-  padding-left: 250px;
+  padding: 10px 20px 20px;
 `;
 
 export const Switch = styled.div`

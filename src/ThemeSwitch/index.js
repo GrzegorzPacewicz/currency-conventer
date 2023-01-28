@@ -11,9 +11,9 @@ const ThemeSwitch = () => {
   return (
     <Wrapper>
       <Label>
-        <span>Ciemne tło {checked ? "on" : "off"}</span>
         <Input checked={checked} type="checkbox" onChange={handleChange} />
         <Switch />
+        <span>Ciemne tło {checked ? "on" : "off"}</span>
       </Label>
     </Wrapper>
   );
