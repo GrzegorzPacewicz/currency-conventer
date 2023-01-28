@@ -10,7 +10,7 @@ function App() {
     <Container>
       <Clock />
       <Header title="Kalkulator walut" />
-      <ThemeSwitch>this</ThemeSwitch>
+      <ThemeSwitch />
       <Form />
       <Footer />
     </Container>

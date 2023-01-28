@@ -1,13 +1,21 @@
-import "./switch.css";
+import { useState, ChangeEvent } from "react";
+import { Label, Input, Switch, Wrapper } from "./styled";
 
 const ThemeSwitch = () => {
+  const [checked, setChecked] = useState(false);
+
+  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setChecked(e.target.checked);
+  };
+
   return (
-    <>
-      <label className="switch">
-        <input type="checkbox"></input>
-        <span className="slider"></span>
-      </label>
-    </>
+    <Wrapper>
+      <Label>
+        <span>Ciemne tło {checked ? "on" : "off"}</span>
+        <Input checked={checked} type="checkbox" onChange={handleChange} />
+        <Switch />
+      </Label>
+    </Wrapper>
   );
 };
 
