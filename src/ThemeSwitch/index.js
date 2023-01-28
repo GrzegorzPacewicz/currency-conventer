@@ -1,12 +1,12 @@
-import { Input, Switch, Slider } from "./styled";
+import "./switch.css";
 
 const ThemeSwitch = () => {
   return (
     <>
-      <Switch>
-        <Input type="checkbox"></Input>
-        <Slider></Slider>
-      </Switch>
+      <label className="switch">
+        <input type="checkbox"></input>
+        <span className="slider"></span>
+      </label>
     </>
   );
 };
