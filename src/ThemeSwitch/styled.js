@@ -10,6 +10,9 @@ export const Label = styled.label`
   gap: 10px;
   cursor: pointer;
   padding: 10px 20px 20px;
+
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+    padding: 10px 0;}
 `;
 
 export const Switch = styled.div`
