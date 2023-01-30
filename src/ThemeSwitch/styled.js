@@ -34,7 +34,7 @@ export const Switch = styled.div`
     border-radius: 35px;
     top: 50%;
     left: 2px;
-    background: ${({ theme }) => theme.color.teal};
+    background: ${({ theme }) => theme.elementColor.wheel};
     transform: translate(0, -50%);
   }
 `;
