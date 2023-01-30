@@ -10,18 +10,20 @@ import { lightTheme, darkTheme } from "./theme";
 import { useState } from "react";
 
 function App() {
-  const [theme, setTheme] = useState("darkTheme");
-  const themeToggler = () => {
-    theme === "lightTheme" ? setTheme("darkTheme") : setTheme("lightTheme");
+  const [theme, setTheme] = useState("light");
+  const isDarkTheme = theme === "dark";
+
+  const toggleTheme = () => {
+    setTheme(isDarkTheme ? "light" : "dark");
   };
 
   return (
-    <ThemeProvider theme={theme === "lightTheme" ? lightTheme : darkTheme}>
+    <ThemeProvider theme={isDarkTheme ? darkTheme : lightTheme}>
       <GlobalStyle />
       <Container>
         <Clock />
         <Header />
-        <ThemeSwitch />
+        <ThemeSwitch toggleTheme={toggleTheme} isDarkTheme={isDarkTheme} />
         <Form />
         <Footer />
       </Container>
