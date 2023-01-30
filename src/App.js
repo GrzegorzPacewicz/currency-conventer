@@ -4,16 +4,28 @@ import Clock from "./Clock";
 import Footer from "./Footer";
 import ThemeSwitch from "./ThemeSwitch";
 import { Container } from "./Container/styled";
+import { ThemeProvider } from "styled-components";
+import { GlobalStyle } from "./GlobalStyle";
+import { lightTheme, darkTheme } from "./theme";
+import { useState } from "react";
 
 function App() {
+  const [theme, setTheme] = useState("darkTheme");
+  const themeToggler = () => {
+    theme === "lightTheme" ? setTheme("darkTheme") : setTheme("lightTheme");
+  };
+
   return (
-    <Container>
-      <Clock />
-      <Header title="Kalkulator walut" />
-      <ThemeSwitch />
-      <Form />
-      <Footer />
-    </Container>
+    <ThemeProvider theme={theme === "lightTheme" ? lightTheme : darkTheme}>
+      <GlobalStyle />
+      <Container>
+        <Clock />
+        <Header title="Kalkulator walut" />
+        <ThemeSwitch />
+        <Form />
+        <Footer />
+      </Container>
+    </ThemeProvider>
   );
 }
 
