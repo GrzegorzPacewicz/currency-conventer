@@ -20,7 +20,7 @@ function App() {
       <GlobalStyle />
       <Container>
         <Clock />
-        <Header title="Kalkulator walut" />
+        <Header />
         <ThemeSwitch />
         <Form />
         <Footer />
