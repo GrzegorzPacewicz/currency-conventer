@@ -12,14 +12,15 @@ export const Label = styled.label`
   padding: 10px 20px 20px;
 
   @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
-    padding: 10px 0;}
+    padding: 10px 0;
+  }
 `;
 
 export const Switch = styled.div`
   position: relative;
   width: 60px;
   height: 28px;
-  background: ${({ theme }) => theme.color.teal};
+  background: ${({ theme }) => theme.color.red};
   border-radius: 32px;
   padding: 4px;
   transition: 300ms all;
@@ -33,7 +34,7 @@ export const Switch = styled.div`
     border-radius: 35px;
     top: 50%;
     left: 2px;
-    background: white;
+    background: ${({ theme }) => theme.color.teal};
     transform: translate(0, -50%);
   }
 `;

@@ -5,6 +5,7 @@ export const StyledClock = styled.div`
   padding: 20px 20px 0 0;
   font-size: small;
   text-align: right;
+  color: ${({ theme }) => theme.elementColor.text};
 
   @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
     padding: 20px 0 10px 0;

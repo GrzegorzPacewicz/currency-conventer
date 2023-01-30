@@ -7,10 +7,9 @@ export const Container = styled.main`
   flex-basis: 700px;
   border-radius: 30px;
   box-shadow: 0 0 10px ${({ theme }) => theme.color.black};
-  background-color: ${({ theme }) => theme.color.pastelgreen};
+  background-color: ${({ theme }) => theme.elementColor.background};
 
-
-  @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
     width: 350px;
     border-radius: 0;
     box-shadow: none;

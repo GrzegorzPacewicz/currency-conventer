@@ -6,7 +6,7 @@ export const StyledFooter = styled.div`
   font-size: small;
   text-align: left;
   text-decoration: none;
-  color: black;
+  color: ${({ theme }) => theme.elementColor.text};
 
   @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
     padding: 20px 0;
@@ -14,9 +14,9 @@ export const StyledFooter = styled.div`
 `;
 
 export const Link = styled.a`
-  color: black;
+  color: ${({ theme }) => theme.elementColor.text};
   text-decoration: none;
-  
+
   &:hover {
     border-bottom: 1px solid;
   }

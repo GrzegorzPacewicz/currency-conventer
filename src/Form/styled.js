@@ -5,7 +5,7 @@ export const StyledForm = styled.form`
   text-align: center;
   margin: 0 auto;
   min-height: 450px;
-  background: ${({ theme }) => theme.color.pastelgreen};
+  background: ${({ theme }) => theme.elementColor.background};
   @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
     padding: 0;
     min-height: 415px;
@@ -17,6 +17,7 @@ export const Caution = styled.p`
   margin: 10px 0;
   padding: 10px 0 0 0;
   font-size: small;
+  color: ${({ theme }) => theme.elementColor.text};
 `;
 
 export const FormFieldset = styled.fieldset`
@@ -24,7 +25,8 @@ export const FormFieldset = styled.fieldset`
   margin: 10px auto;
   padding: 15px 10px;
   min-height: 95px;
-  border: 1px solid ${({ theme }) => theme.color.teal};
+  border: 1px solid ${({ theme }) => theme.elementColor.border};
+  color: ${({ theme }) => theme.elementColor.text};
   @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
     padding: 10px;
   }
@@ -32,7 +34,7 @@ export const FormFieldset = styled.fieldset`
 
 export const FormLegend = styled.legend`
   text-align: left;
-  border: 1px solid ${({ theme }) => theme.color.teal};
+  border: 1px solid ${({ theme }) => theme.elementColor.border};
   padding: 5px;
 `;
 
@@ -42,6 +44,7 @@ export const FormInput = styled.input`
   text-align: center;
   max-width: 200px;
   width: 100%;
+  color: ${({ theme }) => theme.elementColor.input};
 `;
 
 export const FormSelect = styled.select`
@@ -49,13 +52,14 @@ export const FormSelect = styled.select`
   max-width: 200px;
   text-align: center;
   width: 100%;
+  color: ${({ theme }) => theme.elementColor.select};
 `;
 
 export const FormButton = styled.button`
   padding: 12px;
   margin: 10px 0;
   color: #fff;
-  background: ${({ theme }) => theme.color.teal};
+  background: ${({ theme }) => theme.elementColor.button};
   border: 1px;
   width: 100%;
   cursor: pointer;
@@ -68,10 +72,10 @@ export const FormButton = styled.button`
 `;
 
 export const Loading = styled.p`
-  color: ${({ theme }) => theme.color.teal};
+  color: ${({ theme }) => theme.elementColor.text};
   padding-top: 150px;
- `;
+`;
 
 export const Failure = styled(Loading)`
-  color: ${({ theme }) => theme.color.red};
- `;
+  color: ${({ theme }) => theme.elementColor.failure};
+`;
