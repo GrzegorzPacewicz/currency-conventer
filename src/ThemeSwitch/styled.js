@@ -51,3 +51,7 @@ export const Input = styled.input`
     }
   }
 `;
+
+export const SwitchText = styled.span`
+  color: ${({ theme }) => theme.elementColor.text};
+`;
