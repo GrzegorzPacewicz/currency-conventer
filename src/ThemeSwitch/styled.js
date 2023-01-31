@@ -20,10 +20,10 @@ export const Switch = styled.div`
   position: relative;
   width: 60px;
   height: 28px;
-  background: ${({ theme }) => theme.color.red};
+  background: ${({ theme }) => theme.elementColor.switchbackground};
   border-radius: 32px;
   padding: 4px;
-  transition: 300ms all;
+  transition: 0.5s all;
 
   &:before {
     transition: 300ms all;
@@ -44,7 +44,7 @@ export const Input = styled.input`
   position: absolute;
 
   &:checked + ${Switch} {
-    background: ${({ theme }) => theme.color.black};
+    background: ${({ theme }) => theme.elementColor.switchbackground};
 
     &:before {
       transform: translate(32px, -50%);

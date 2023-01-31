@@ -5,6 +5,7 @@ export const StyledForm = styled.form`
   text-align: center;
   margin: 0 auto;
   min-height: 450px;
+  transition: all 0.3s ease;
   background: ${({ theme }) => theme.elementColor.background};
   @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
     padding: 0;
@@ -25,6 +26,7 @@ export const FormFieldset = styled.fieldset`
   margin: 10px auto;
   padding: 15px 10px;
   min-height: 95px;
+  transition: all 0.3s ease;
   border: 1px solid ${({ theme }) => theme.elementColor.border};
   color: ${({ theme }) => theme.elementColor.text};
   @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
@@ -63,6 +65,7 @@ export const FormButton = styled.button`
   border: 1px;
   width: 100%;
   cursor: pointer;
+  transition: all 0.3s ease;
   &:hover {
     filter: brightness(110%);
   }

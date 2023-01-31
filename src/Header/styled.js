@@ -5,5 +5,6 @@ export const StyledHeader = styled.header`
   font-weight: 700;
   background: ${({ theme }) => theme.elementColor.background};
   color: ${({ theme }) => theme.elementColor.text};
-  padding: 20px;
+  margin: 20px;
+  transition: all 0.3s ease;
 `;

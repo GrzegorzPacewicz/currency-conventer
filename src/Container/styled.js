@@ -6,6 +6,7 @@ export const Container = styled.main`
   width: 450px;
   flex-basis: 700px;
   border-radius: 30px;
+  transition: all 0.3s ease;
   box-shadow: 0 0 10px ${({ theme }) => theme.color.black};
   background-color: ${({ theme }) => theme.elementColor.background};
 
