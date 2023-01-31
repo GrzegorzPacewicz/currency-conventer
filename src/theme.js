@@ -30,15 +30,15 @@ export const lightTheme = {
 
 export const darkTheme = {
   elementColor: {
-    background: color.teal,
+    background: color.eveningsee,
     text: color.white,
     border: color.white,
-    button: color.eveningsee,
+    button: color.teal,
     failure: color.red,
     input: color.black,
     select: color.black,
     switch: color.pastelgreen,
-    wheel: color.teal,
+    wheel: color.eveningsee,
     switchbackground: color.pastelgreen,
     icon: color.pastelgreen,
   },
