@@ -1,5 +1,7 @@
 import { useState } from "react";
-import { Label, Input, Switch, Wrapper, SwitchText } from "./styled";
+import { Label, Input, Switch, Wrapper } from "./styled";
+import SunIcon from "./icons/SunIcon";
+import MoonIcon from "./icons/MoonIcon";
 
 const ThemeSwitch = ({ toggleTheme, isDarkTheme }) => {
   const [checked, setChecked] = useState();
@@ -16,9 +18,10 @@ const ThemeSwitch = ({ toggleTheme, isDarkTheme }) => {
   return (
     <Wrapper>
       <Label>
+        <SunIcon />
         <Input type="checkbox" checked={isToggled} onChange={onToggle} />
         <Switch />
-        <SwitchText>Ciemne tło {checked ? "on" : "off"}</SwitchText>
+        <MoonIcon />
       </Label>
     </Wrapper>
   );
