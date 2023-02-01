@@ -2,7 +2,7 @@ import Form from "./features/Form";
 import Header from "./features/Header";
 import Clock from "./features/Clock";
 import Footer from "./features/Footer";
-import ThemeSwitch from "./ThemeSwitch";
+import ThemeSwitch from "./features/ThemeSwitch";
 import { Container } from "./features/Container/styled";
 import { ThemeProvider } from "styled-components";
 import { GlobalStyle } from "./GlobalStyle";
