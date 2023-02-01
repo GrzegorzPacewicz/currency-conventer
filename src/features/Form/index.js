@@ -10,7 +10,7 @@ import {
   Failure,
 } from "./styled";
 import { useState, useRef } from "react";
-import { useRatesData } from "../useRatesData";
+import { useRatesData } from "../../useRatesData";
 import Result from "../Result";
 
 const Form = () => {
@@ -34,7 +34,6 @@ const Form = () => {
       sourceAmount: +amountExchange,
       targetAmount: amountExchange * rateExchange,
       currency,
-      
     });
   };
 
