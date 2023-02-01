@@ -11,6 +11,7 @@ The project I make during FrondEndDeveloper course: https://youcode.pl/frontend-
 2. Choose currency in the field "Przelicz na"
 3. Press "Otrzymasz" to see how much money You will get
 4. Base currency is PLN
+5. One can change theme to dark by clicking the circle in the top of the app
 
 ![Demonstration](animation.gif)
 
