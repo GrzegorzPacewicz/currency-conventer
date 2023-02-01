@@ -14,9 +14,12 @@ export const GlobalStyle = createGlobalStyle`
       font-family: 'Roboto', sans-serif;
       color: ${({ theme }) => theme.color.black};
       text-align: center;
-      background-image: url("${background}");
+      background-image:  ${({ theme }) =>
+        theme.elementColor.lineargradient}, url("${background}");
       display: flex;
       align-items: center;
       justify-content: center;
+      transition: all 0.3s ease;
     }
+
 `;

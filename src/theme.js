@@ -5,6 +5,10 @@ const color = {
   teal: "#008080",
   red: "#ED120C",
   eveningsee: "#074B4B",
+  gradientdark:
+    "linear-gradient(to bottom, rgba(0,0,0,0.7) 0%,rgba(0,0,0,0.7) 100%)",
+  gradientlight:
+    "linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 100%)",
 };
 const breakpoint = {
   mobileMax: 767,
@@ -23,6 +27,7 @@ export const lightTheme = {
     wheel: color.pastelgreen,
     switchbackground: color.teal,
     icon: color.teal,
+    lineargradient: color.gradientlight,
   },
   color,
   breakpoint,
@@ -41,6 +46,7 @@ export const darkTheme = {
     wheel: color.eveningsee,
     switchbackground: color.pastelgreen,
     icon: color.pastelgreen,
+    lineargradient: color.gradientdark,
   },
   color,
   breakpoint,
