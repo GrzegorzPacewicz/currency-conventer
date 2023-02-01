@@ -3,18 +3,22 @@
 ## [Demo version](https://grzegorzpacewicz.github.io/currency-conventer-react/)
 
 ## Basic Info
+
 The project I make during FrondEndDeveloper course: https://youcode.pl/frontend-developer-od-podstaw
 
 ## Mannual
 
 1. Put amount of currency you want to exchange in the field "Kwota do przeliczenia w PLN"
-2. Choose currency in the field "Przelicz na"
-3. Press "Otrzymasz" to see how much money You will get
+2. Choose currency in the field "Wybierz walutę"
+3. Press "Przelicz" to see how much money You will get
 4. Base currency is PLN
+5. One can change theme to dark by clicking the circle in the top of the app
+6. All rates are taken from European Central Bank (EBC)
 
 ![Demonstration](animation.gif)
 
 ## Technologies used
+
 - html
 - css
 - js
