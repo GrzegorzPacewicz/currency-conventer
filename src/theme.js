@@ -5,6 +5,7 @@ const color = {
   teal: "#008080",
   red: "#ED120C",
   eveningsee: "#074B4B",
+  redoragne: "#FFBB34",
   gradientdark:
     "linear-gradient(to bottom, rgba(0,0,0,0.7) 0%,rgba(0,0,0,0.7) 100%)",
   gradientlight:
@@ -39,7 +40,7 @@ export const darkTheme = {
     text: color.white,
     border: color.white,
     button: color.teal,
-    failure: color.red,
+    failure: color.redoragne,
     input: color.black,
     select: color.black,
     switch: color.pastelgreen,
