@@ -1,22 +1,25 @@
-import { useState } from "react";
 import { Label, Input, Switch, Wrapper } from "./styled";
 import SunIcon from "./icons/SunIcon";
 import MoonIcon from "./icons/MoonIcon";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  selectIsDarkTheme,
+  toggleIsDarkTheme,
+} from "../../common/theme/themeSlice";
 
-const ThemeSwitch = ({ toggleTheme, isDarkTheme }) => {
-
-  const [isToggled, setIsToggled] = useState(isDarkTheme);
-
-  const onToggle = () => {
-    setIsToggled(!isToggled);
-    toggleTheme();
-  };
+const ThemeSwitch = () => {
+  const dispatch = useDispatch();
+  const isDarkTheme = useSelector(selectIsDarkTheme);
 
   return (
     <Wrapper>
       <Label>
         <SunIcon />
-        <Input type="checkbox" checked={isToggled} onChange={onToggle} />
+        <Input
+          type="checkbox"
+          onClick={() => dispatch(toggleIsDarkTheme())}
+          moveRight={isDarkTheme}
+        />
         <Switch />
         <MoonIcon />
       </Label>

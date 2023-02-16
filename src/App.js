@@ -7,33 +7,19 @@ import { Container } from "./features/Container/styled";
 import { ThemeProvider } from "styled-components";
 import { GlobalStyle } from "./GlobalStyle";
 import { lightTheme, darkTheme } from "./common/theme/theme";
-import { useState } from "react";
-import { useEffect } from "react";
-
-const getLocalStorageTheme = () => {
-  const localStorageTheme = localStorage.getItem("theme");
-  return localStorageTheme ? JSON.parse(localStorageTheme) : [];
-};
+import { useSelector } from "react-redux";
+import { selectIsDarkTheme } from "./common/theme/themeSlice";
 
 function App() {
-  const [theme, setTheme] = useState(getLocalStorageTheme);
-  const isDarkTheme = theme === "dark";
-
-  useEffect(() => {
-    localStorage.setItem("theme", JSON.stringify(theme));
-  }, [theme]);
-
-  const toggleTheme = () => {
-    setTheme(isDarkTheme ? "light" : "dark");
-  };
+  const isDarkTheme = useSelector(selectIsDarkTheme);
 
   return (
-    <ThemeProvider theme={isDarkTheme ? darkTheme : lightTheme}>
+    <ThemeProvider theme={isDarkTheme ? lightTheme : darkTheme}>
       <GlobalStyle />
       <Container>
         <Clock />
         <Header />
-        <ThemeSwitch toggleTheme={toggleTheme} isDarkTheme={isDarkTheme} />
+        <ThemeSwitch />
         <Form />
         <Footer />
       </Container>
