@@ -5,7 +5,7 @@ const sagaMiddleware = createSagaMiddleware();
 
 const store = configureStore({
   reducer: {
-    themeButton: themeButtonReducer,
+    theme: themeReducer,
   },
   middleware: [sagaMiddleware],
 });
