@@ -6,7 +6,7 @@ import ThemeSwitch from "./features/ThemeSwitch";
 import { Container } from "./features/Container/styled";
 import { ThemeProvider } from "styled-components";
 import { GlobalStyle } from "./GlobalStyle";
-import { lightTheme, darkTheme } from "./theme";
+import { lightTheme, darkTheme } from "./common/theme/theme";
 import { useState } from "react";
 import { useEffect } from "react";
 
