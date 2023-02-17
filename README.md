@@ -15,7 +15,7 @@ The project I make during FrondEndDeveloper course: https://youcode.pl/frontend-
 5. One can change theme to dark by clicking the circle in the top of the app
 6. All rates are taken from European Central Bank (EBC)
 
-![Demonstration](animation.gif)
+![Demonstration](./src/images/animation.gif)
 
 ## Technologies used
 
@@ -33,6 +33,8 @@ The project I make during FrondEndDeveloper course: https://youcode.pl/frontend-
 - styled components
 - custom hook: useRef, useState, useEffect
 - axios, API
+- react-redux
+- saga
 
 ## Getting Started with Create React App
 
