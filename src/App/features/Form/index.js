@@ -10,8 +10,8 @@ import {
   Failure,
 } from "./styled";
 import { useState, useRef } from "react";
-import { useRatesData } from "../../useRatesData";
 import Result from "../Result";
+import { useRatesData } from "./useRatesData";
 
 const Form = () => {
   const [amountExchange, setAmountExchange] = useState("");
