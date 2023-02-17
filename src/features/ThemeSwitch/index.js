@@ -17,8 +17,8 @@ const ThemeSwitch = () => {
         <SunIcon />
         <Input
           type="checkbox"
-          onClick={() => dispatch(toggleIsDarkTheme())}
-          moveRight={isDarkTheme}
+          onChange={() => dispatch(toggleIsDarkTheme())}
+          checked={isDarkTheme}
         />
         <Switch />
         <MoonIcon />
