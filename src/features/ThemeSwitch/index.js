@@ -2,10 +2,7 @@ import { Label, Input, Switch, Wrapper } from "./styled";
 import SunIcon from "./icons/SunIcon";
 import MoonIcon from "./icons/MoonIcon";
 import { useDispatch, useSelector } from "react-redux";
-import {
-  selectIsDarkTheme,
-  toggleIsDarkTheme,
-} from "../../common/theme/themeSlice";
+import { selectIsDarkTheme, toggleIsDarkTheme } from "../../core/themeSlice";
 
 const ThemeSwitch = () => {
   const dispatch = useDispatch();

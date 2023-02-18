@@ -1,5 +1,5 @@
 import { useSelector } from "react-redux";
-import { selectIsDarkTheme } from "../common/theme/themeSlice";
+import { selectIsDarkTheme } from "./themeSlice";
 import Form from "../features/Form";
 import Header from "../features/Header";
 import Clock from "../features/Clock";
@@ -8,7 +8,7 @@ import ThemeSwitch from "../features/ThemeSwitch";
 import { Container } from "../features/Container/styled";
 import { ThemeProvider } from "styled-components";
 import { GlobalStyle } from "./GlobalStyle";
-import { lightTheme, darkTheme } from "../common/theme/theme";
+import { lightTheme, darkTheme } from "./theme";
 
 function App() {
   const isDarkTheme = useSelector(selectIsDarkTheme);
