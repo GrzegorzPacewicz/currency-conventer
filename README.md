@@ -1,6 +1,6 @@
 # Kantor
 
-## [Demo version](https://grzegorzpacewicz.github.io/currency-conventer-react/)
+## [Demo version](https://grzegorzpacewicz.github.io/currency-conventer/)
 
 ## Basic Info
 
